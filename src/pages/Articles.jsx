@@ -16,6 +16,7 @@ import Loader from "../components/Loader";
 import Tags from "../components/common/Tags";
 import InfiniteScroll from "react-infinite-scroll-component";
 import CardSkeleton from "../components/skeleton/CardSkeleton";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
   const [blogsData, setBlogsData] = useState();
@@ -47,7 +48,7 @@ const Articles = () => {
       }
     };
     fetchBlogs();
-    console.log(blogsData?.length);
+   // console.log(blogsData?.length);
   }, []);
 
   const fetchMoreBlogs = async () => {
@@ -89,7 +90,8 @@ const Articles = () => {
   return (
     <div className='mx-auto max-w-7xl'>
       <h1 className=' my-12 text-center text-4xl font-extrabold'>Articles</h1>
-
+       <p className=' text-center' style={{marginTop: "-2rem", marginBottom: "1rem"}}>more results from server <Link to={'https://amsr-web-engine.vercel.app'}>click here</Link> </p>
+     
       <div className=''>
         <Search />
       </div>

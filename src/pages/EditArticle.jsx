@@ -153,13 +153,13 @@ const EditArticle = () => {
           id='title'
           placeholder='Enter title here...'
         />
-        <input
+        {/* <input
           onChange={onChangeHandler}
           type='file'
           className='mt-5 w-full rounded-md border border-zinc-800 py-3 pl-3 text-zinc-700'
           name=''
           placeholder='Enter title here...'
-        />
+        /> */}
         <BlogEditor blogData={blogData} setBlogData={setBlogData} />
         <div className='mx-auto my-8 mt-20 w-full max-w-[50%] md:mt-0 lg:max-w-[40%] '>
           <button

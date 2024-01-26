@@ -127,6 +127,13 @@ const Header = () => {
           >
             <Link to='/articles'>Articles</Link>
           </li>
+          <li
+            className={`${styles.li} ${
+              location.pathname === "/Search" && "highlight"
+            } `}
+          >
+            <Link to='/Search'>Search</Link>
+          </li>
           {authenticated && (
             <li
               className={`${styles.li} ${

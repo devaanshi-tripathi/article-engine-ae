@@ -10,7 +10,7 @@ const Hero = () => {
         </h1>
         <p className='text-gray-400 md:pt-4 lg:text-lg'>
          This is platform where you can write your throughts -&gt; Article's / Blogs /
-         Post's just like another social media app
+         Post's just like another social media app 
         </p>
       </div>
       <div className='mx-auto max-w-[70%] bg-transparent md:max-w-[50%]'>

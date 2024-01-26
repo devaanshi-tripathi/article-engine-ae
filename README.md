@@ -49,4 +49,3 @@ This app is built with React + Vite, TailwindCSS, and Firebase. It uses Firebase
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-

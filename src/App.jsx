@@ -13,7 +13,8 @@ import WriteBlog from "./pages/WriteBlog";
 import SingleArticle from "./pages/SingleArticle";
 import Category from "./pages/Category";
 import EditArticle from "./pages/EditArticle";
-import Error from "./components/Error";
+import Error from "./pages/Error";
+import Search from "./pages/Search";
 
 const App = () => {
   /* 
@@ -44,7 +45,8 @@ const App = () => {
           <Route path='/sign-up' element={<Register />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
           <Route path='/sign-out' element={<Logout />} />
-          <Route path="/*" element={<Error />} />
+          <Route path='/Search' element={<Search />} />
+          <Route path='/*' element={<Error />} />
         </Routes>
       </Router>
       <Toaster
