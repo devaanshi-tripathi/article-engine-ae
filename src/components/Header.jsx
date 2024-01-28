@@ -68,11 +68,10 @@ const Header = () => {
 
   const styles = {
     li: "hover:text-slate-300 ease-in-out transition duration-200 relative inline-block capitalize",
-    mobileMenu: `absolute space-y-5 ease-in-out duration-500 transition-all text-2xl font-semibold ${
-      show
-        ? "translate-x-0 h-screen w-full top-12 bg-black justify-center"
-        : "-translate-x-full top-12"
-    } `,
+    mobileMenu: `absolute space-y-5 ease-in-out duration-500 transition-all text-2xl font-semibold ${show
+      ? "translate-x-0 h-screen w-full top-12 bg-black justify-center"
+      : "-translate-x-full top-12"
+      } `,
   };
   return (
     <header className='header sticky top-0 z-40'>
@@ -81,65 +80,57 @@ const Header = () => {
           onClick={() => navigate("/")}
           className='logo cursor-pointer pl-4 text-lg sm:text-3xl'
         >
-         Article's Engine
+          Article's Engine
         </h1>
         <div
           onClick={() => setShow(!show)}
           className='mr-3 cursor-pointer space-y-1 transition-all duration-200 ease-in-out md:hidden'
         >
           <span
-            className={`block h-[2px] w-6 rounded-full bg-white transition-all duration-200 ease-in-out ${
-              show ? "translate-y-2 rotate-[50deg]" : "translate-y-0 rotate-0"
-            } `}
+            className={`block h-[2px] w-6 rounded-full bg-white transition-all duration-200 ease-in-out ${show ? "translate-y-2 rotate-[50deg]" : "translate-y-0 rotate-0"
+              } `}
           ></span>
           <span
-            className={`block h-[2px] w-6 rounded-full bg-white transition-all duration-200 ease-in-out ${
-              show ? "opacity-0" : "opacity-100"
-            } `}
+            className={`block h-[2px] w-6 rounded-full bg-white transition-all duration-200 ease-in-out ${show ? "opacity-0" : "opacity-100"
+              } `}
           ></span>
           <span
-            className={`block h-[2px] w-6 rounded-full bg-white transition-all duration-200 ease-in-out ${
-              show
-                ? "-translate-y-1 -rotate-[50deg]"
-                : " translate-y-0 rotate-0"
-            } `}
+            className={`block h-[2px] w-6 rounded-full bg-white transition-all duration-200 ease-in-out ${show
+              ? "-translate-y-1 -rotate-[50deg]"
+              : " translate-y-0 rotate-0"
+              } `}
           ></span>
         </div>
         {/* Nav links */}
         <nav
-          className={`absolute mr-4 flex items-center space-y-6 py-12 text-center text-lg transition-all duration-500 ease-in-out md:static md:h-auto md:w-auto md:translate-x-0 md:flex-row md:space-x-5 md:space-y-0 md:bg-transparent md:py-0 md:text-left ${
-            show
-              ? "top-12 h-screen w-full translate-x-0 flex-col bg-black"
-              : "top-12 h-screen w-full -translate-x-full flex-col bg-black"
-          } `}
+          className={`absolute mr-4 flex items-center space-y-6 py-12 text-center text-lg transition-all duration-500 ease-in-out md:static md:h-auto md:w-auto md:translate-x-0 md:flex-row md:space-x-5 md:space-y-0 md:bg-transparent md:py-0 md:text-left ${show
+            ? "top-12 h-screen w-full translate-x-0 flex-col bg-black"
+            : "top-12 h-screen w-full -translate-x-full flex-col bg-black"
+            } `}
         >
           <li
-            className={`${styles.li} ${
-              location.pathname === "/" && "highlight"
-            } `}
+            className={`${styles.li} ${location.pathname === "/" && "highlight"
+              } `}
           >
             <Link to='/'>Home</Link>
           </li>
           <li
-            className={`${styles.li} ${
-              location.pathname === "/articles" && "highlight"
-            } `}
+            className={`${styles.li} ${location.pathname === "/articles" && "highlight"
+              } `}
           >
             <Link to='/articles'>Articles</Link>
           </li>
           <li
-            className={`${styles.li} ${
-              location.pathname === "/Search" && "highlight"
-            } `}
+            className={`${styles.li} ${location.pathname === "/Search" && "highlight"
+              } `}
           >
             <Link to='/Search'>Search</Link>
           </li>
           {authenticated && (
             <li
-              className={`${styles.li} ${
-                location.pathname === `/>myblogs/${auth.currentUser.uid}` &&
+              className={`${styles.li} ${location.pathname === `/>myblogs/${auth.currentUser.uid}` &&
                 "highlight"
-              } `}
+                } `}
             >
               <Link to={`/myblogs/${auth.currentUser.uid}`}>My Blogs</Link>
             </li>
@@ -148,11 +139,20 @@ const Header = () => {
           {/* Write Blog */}
           {authenticated && (
             <li
-              className={`${styles.li} ${
-                location.pathname === "/write" && "highlight"
-              } `}
+              className={`${styles.li} ${location.pathname === "/write" && "highlight"
+                } `}
             >
               <Link to='/write'>Write</Link>
+            </li>
+          )}
+
+          {authenticated && (
+            <li
+              className={`${styles.li} ${location.pathname === `/Aiamsrbot` &&
+                "highlight"
+                } `}
+            >
+              <Link to='/Aiamsrbot'>Ai</Link>
             </li>
           )}
 
@@ -165,9 +165,8 @@ const Header = () => {
             </button>
           ) : (
             <li
-              className={`${styles.li} ${
-                location.pathname === "/sign-in" && "highlight"
-              } `}
+              className={`${styles.li} ${location.pathname === "/sign-in" && "highlight"
+                } `}
             >
               <Link to='/sign-in'>sign-in</Link>
             </li>

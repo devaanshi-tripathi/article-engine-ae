@@ -15,6 +15,7 @@ import Category from "./pages/Category";
 import EditArticle from "./pages/EditArticle";
 import Error from "./pages/Error";
 import Search from "./pages/Search";
+import Aiamsrbot from "./pages/Aiamsrbot";
 
 const App = () => {
   /* 
@@ -47,6 +48,7 @@ const App = () => {
           <Route path='/sign-out' element={<Logout />} />
           <Route path='/Search' element={<Search />} />
           <Route path='/*' element={<Error />} />
+          <Route path="/Aiamsrbot" element={<Aiamsrbot />} />
         </Routes>
       </Router>
       <Toaster

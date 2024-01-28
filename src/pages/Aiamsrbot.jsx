@@ -1,11 +1,11 @@
 import React from 'react';
 import Iframe from 'react-iframe';
 
-const Search = () => {
+const Aiamsrbot = () => {
   return (
-    <div style={{ width: '100%', height: '100vh', overflow: 'hidden', backgroundColor: 'white'}}>
+    <div style={{ width: '100%', height: '100vh', overflow: 'hidden'}}>
       <Iframe
-        url="https://amsr-web-engine.vercel.app"
+        url="https://amsrbot.netlify.app/"
         width="100%"
         height="100%"
         
@@ -17,4 +17,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Aiamsrbot;
