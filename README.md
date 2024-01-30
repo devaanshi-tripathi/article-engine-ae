@@ -1,13 +1,13 @@
-# Write-It
+# Article Engine
 
-This is a web app that allows you to create, view, edit, and delete blog posts. You can also log in and log out.
+This is a web app that allows you to create, view, edit, and delete articles posts. You can also log in and log out.
 
-This app is built with React + Vite, TailwindCSS, and Firebase. It uses Firebase Authentication, Firestore, Storage, and Functions to handle the backend functionality.
+This app is built with React + Vite, TailwindCSS, and Firebase &Bunjs. It uses Firebase Authentication, Firestore, Storage, and Functions to handle the backend functionality.
 
 ## Features
 
 - Log in and log out using Firebase Authentication
-- Create, view, edit, and delete blog posts using Firestore and Storage
+- Create, view, edit, and delete articles posts using Firestore and Storage
 - Users can also add cover image
 - comment on posts
 - Responsive design that adapts to different screen sizes
@@ -19,19 +19,27 @@ This app is built with React + Vite, TailwindCSS, and Firebase. It uses Firebase
 1. To get started with this project, run
 
 ```bash
-  https://github.com/13paras/react-firebase-blog.git
+  https://github.com/Aryan0-1Maurya/article-engine
 ```
 
 2. Navigate into the project directory:
 
     ```bash
-    cd react-firebase-blog
+    cd article-engine
     ```
 
 3. Install the dependencies:
 
     ```bash
-    npm install
+    bun install
+    ```
+    or
+        ```bash
+   pnpm i
+
+   npm i
+
+   yarn
     ```
 
 4. Create a .env file in the root folder and add your Firebase configuration variables
@@ -39,12 +47,21 @@ This app is built with React + Vite, TailwindCSS, and Firebase. It uses Firebase
 5. Start the development server:
 
     ```bash
-    npm run dev
+   bun dev
+    ```
+    or
+        ```bash
+   yarn dev
+
+   npm run dev
+
+   pnpm dev
     ```
 
 ## Copyrights
-  
-   <Aryan Maurya />
+  ```
+     <Aryan Maurya />
+     ```
 
 ## License
 

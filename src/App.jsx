@@ -48,7 +48,8 @@ const App = () => {
           <Route path='/sign-out' element={<Logout />} />
           <Route path='/Search' element={<Search />} />
           <Route path='/*' element={<Error />} />
-          <Route path="/Aiamsrbot" element={<Aiamsrbot />} />
+          <Route path='/Aiamsrbot' element={<Aiamsrbot />} />
+        
         </Routes>
       </Router>
       <Toaster

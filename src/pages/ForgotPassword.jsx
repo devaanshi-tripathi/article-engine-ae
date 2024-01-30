@@ -25,10 +25,16 @@ const ForgotPassword = () => {
       setLoading(false);
       toast.success("Email sent, check your mailbox!!");
     } catch (error) {
-      console.log(error);
-      toast.error("Unable to send reset email. Please check your credentials!");
+      console.error("Firebase Error:", error);
+      if (error.code === "auth/network-request-failed") {
+        toast.error("Network request failed. Please check your internet connection.");
+      } else {
+        toast.error("Unable to send reset email. Please check your credentials!");
+      }
+      setLoading(false);
     }
   };
+  
 
   if (loading) {
     return <Loader />;
@@ -53,7 +59,7 @@ const ForgotPassword = () => {
 
             {/* <!-- Right column container --> */}
             <div className='mx-auto mb-12 mt-8 md:mb-0 md:w-8/12 lg:mt-0 lg:w-5/12 xl:w-5/12'>
-              <form onSubmit={passwordResetEmail} type='submit'>
+              <form onSubmit={passwordResetEmail}>
                 {/* <!-- Email input --> */}
                 <div className='form__group field relative mx-auto w-full max-w-[90%] py-4'>
                   <input
@@ -62,10 +68,10 @@ const ForgotPassword = () => {
                     onChange={onChangeHandler}
                     value={email}
                     className='form__field bg-[#272727]'
-                    placeholder='Name'
+                    placeholder='Email address'
                     required
                   />
-                  <label htmlFor='name' className='form__label'>
+                  <label htmlFor='email' className='form__label'>
                     Email address
                   </label>
                 </div>
@@ -89,7 +95,7 @@ const ForgotPassword = () => {
                 </div>
 
                 {/* Login button */}
-                <div className='mx-auto  my-8 w-full max-w-[70%] '>
+                <div className='mx-auto my-8 w-full max-w-[70%] '>
                   <button
                     type='submit'
                     className='w-full cursor-pointer rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 py-3 font-semibold text-white transition duration-200 ease-in-out active:scale-90'
